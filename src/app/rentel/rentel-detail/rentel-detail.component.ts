@@ -20,6 +20,7 @@ export class RentelDetailComponent implements OnInit {
     // this.rental = new Rental();
     this.route.params.subscribe(params => {
       this.getRental(params["rentalId"]);
+      console.log(this.rental);
     });
   }
 

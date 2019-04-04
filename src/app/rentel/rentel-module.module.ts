@@ -5,7 +5,9 @@ import { RentelListItemComponent } from "./rentel-list-item/rentel-list-item.com
 import { RentalService } from "./shared/rental.service";
 import { Routes, RouterModule } from "@angular/router";
 import { RentelComponent } from "./rentel.component";
+import { HttpClientModule } from "@angular/common/http";
 import { RentelDetailComponent } from "./rentel-detail/rentel-detail.component";
+import { NgPipesModule } from "ngx-pipes";
 
 const routs: Routes = [
   {
@@ -24,7 +26,12 @@ const routs: Routes = [
     RentelListItemComponent,
     RentelDetailComponent
   ],
-  imports: [CommonModule, RouterModule.forChild(routs)],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routs),
+    HttpClientModule,
+    NgPipesModule
+  ],
   exports: [
     RentelListComponent,
     RentelListItemComponent,
